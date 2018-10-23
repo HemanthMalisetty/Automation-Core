@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="sdet-automation-core" verbose="0"  configfailurepolicy="continue" >
+    <parameter name="isLocal" value="true" />
+    <parameter name="deviceName" value="iPhone 8" />
+
+    <test name="Mobile Unit" enabled="true">
+        <classes>
+            <class name="iOSFunctionalTests"/>
+            <class name="AndroidFunctionalTests"/>
+        </classes>
+    </test>
+</suite>

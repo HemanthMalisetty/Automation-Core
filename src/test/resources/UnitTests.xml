@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Unit Tests" verbose="0"  configfailurepolicy="continue" >
+
+    <test name="Unit Tests" enabled="true">
+        <classes>
+            <class name="UnitTests"/>
+        </classes>
+    </test>
+</suite>

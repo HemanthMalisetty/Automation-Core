@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Sdet-Automation-Core-Unit-Tests" verbose="0" parallel="tests" thread-count="4" configfailurepolicy="continue" data-provider-thread-count="1">
+
+    <test name="Web Unit Chrome" enabled="true">
+        <parameter name="browser" value="Chrome"/>
+        <classes>
+            <class name="WebFunctionalTests"/>
+        </classes>
+    </test>
+
+    <test name="Web Unit Firefox" enabled="true">
+        <parameter name="browser" value="Firefox"/>
+        <classes>
+            <class name="WebFunctionalTests"/>
+        </classes>
+    </test>
+</suite>

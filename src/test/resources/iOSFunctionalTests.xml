@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="iOS Unit Tests" verbose="0"  configfailurepolicy="continue" >
+    <parameter name="bundleID" value="com.apple.Preferences" />
+
+    <test name="iOS Unit" enabled="true">
+        <classes>
+            <class name="iOSFunctionalTests"/>
+        </classes>
+    </test>
+</suite>

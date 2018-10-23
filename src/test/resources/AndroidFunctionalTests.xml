@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Android Unit Tests" verbose="0"  configfailurepolicy="continue" >
+    <parameter name="appPackage" value="com.universalorlando.androidcoretestapplication" />
+    <parameter name="appActivity" value=".MainActivity" />
+    <!--<parameter name="app" value="PUBLIC:/applications/android/test/app-debug.apk"/>-->
+
+    <test name="Android Unit" enabled="true">
+        <classes>
+            <class name="AndroidFunctionalTests"/>
+        </classes>
+    </test>
+</suite>
