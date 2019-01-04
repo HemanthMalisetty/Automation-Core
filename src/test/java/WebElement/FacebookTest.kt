@@ -10,8 +10,9 @@ open class FacebookTest : WebBaseTest(){
     fun loginToFacebookTest(){
         DriverHelper().getURL("https://www.facebook.com")
 
-        FacebookLoginPage().email.setText("test")
-        val email = FacebookLoginPage().email.getValue()
+        val email = FacebookLoginPage()
+                .email.setText("test")
+                .email.getValue()
         print("wait here")
     }
 }
