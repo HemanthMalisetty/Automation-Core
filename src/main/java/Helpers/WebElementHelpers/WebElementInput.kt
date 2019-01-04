@@ -1,11 +1,13 @@
 package Helpers.WebElementHelpers
 
 import org.openqa.selenium.By
+import pageObjects.Facebook.PageObjectBase
 
-open class WebElementInput<T>(locator:By) : WebElementBase<T>(locator) {
+open class WebElementInput<T : PageObjectBase<T>>(locator:By, page : T) : WebElementBase<T>(locator, page) {
+
     fun setText(text:String) : T{
         dh.setText(locator, text)
-        return this as T
+        return page
     }
 
     fun getValue(): String{

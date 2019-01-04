@@ -3,6 +3,7 @@ package pageObjects.Facebook
 import Helpers.WebElementHelpers.WebElementInput
 import org.openqa.selenium.By
 
-open class FacebookLoginPage : PageObjectBase(){
-    var email = WebElementInput<FacebookLoginPage>(By.xpath("//input[@id='email']"))
+class FacebookLoginPage : PageObjectBase<FacebookLoginPage>(){
+    var email = WebElementInput(By.xpath("//input[@id='email']"), this)
+    var password = WebElementInput(By.xpath("//input[@id='password']"), this)
 }

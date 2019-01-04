@@ -12,7 +12,7 @@ open class FacebookTest : WebBaseTest(){
 
         val email = FacebookLoginPage()
                 .email.setText("test")
-                .email.getValue()
-        print("wait here")
+                .password.setText("password")
+        println("wait here")
     }
 }
