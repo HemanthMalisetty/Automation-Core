@@ -5,8 +5,12 @@ import Utilities.Session;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.*;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class WebBaseTest extends BaseTest {
 
@@ -19,7 +23,6 @@ public class WebBaseTest extends BaseTest {
             Session.setGrid("gridURL String");
         }
         //endregion
-
         WebDriverManager.firefoxdriver().version("0.19.0").setup();
         WebDriverManager.chromedriver().setup();
         WebDriverManager.edgedriver().setup();
@@ -27,9 +30,15 @@ public class WebBaseTest extends BaseTest {
 
     @BeforeMethod
     @Parameters({"browser"})
-    public void beforeMethod(@Optional("firefox") String browser){
+    public void beforeMethod(@Optional("chrome") String browser){
         if(browser.toLowerCase().equals("chrome")) {
-            WebDriver driver = new ChromeDriver();
+
+            Map<String, String> mobileEmulation = new HashMap<>();
+            mobileEmulation.put("deviceName", "Pixel 2");
+            ChromeOptions chromeOptions = new ChromeOptions();
+            chromeOptions.setExperimentalOption("mobileEmulation", mobileEmulation);
+
+            WebDriver driver = new ChromeDriver(chromeOptions);
             LocalDriverManager.INSTANCE.setDriver(driver);
         }
         if(browser.toLowerCase().equals("firefox")) {

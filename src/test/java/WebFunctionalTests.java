@@ -11,7 +11,7 @@ public class WebFunctionalTests extends WebBaseTest {
 
 	@Test
 	public void localDriverManagerTest(){
-		String url = "http://www.seleniumeasy.com/test/basic-first-form-demo.html";
+		String url = "https://www.seleniumeasy.com/test/basic-first-form-demo.html";
 		WebDriver driver = LocalDriverManager.INSTANCE.getDriver();
 		driver.get(url);
 		assert driver.getCurrentUrl().equals(url);
