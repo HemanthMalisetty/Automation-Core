@@ -62,14 +62,7 @@ public class MobileBaseTest extends BaseTest {
             // Android
             else
             {
-//                if(app.isEmpty())
-//                {
-//                    capabilities.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.universalstudios.orlandoresort");
-//                    capabilities.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.universalstudios.orlandoresort.controller.userinterface.launcher.LauncherActivity");
-//                }
-//			capabilities.setCapability(MobileCapabilityType.NO_RESET,true);
-//			capabilities.setCapability(MobileCapabilityType.FULL_RESET,false);
-//			capabilities.setCapability(AndroidMobileCapabilityType.DONT_STOP_APP_ON_RESET,true);
+
                 capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UIAutomator2");
                 if (!appPackage.isEmpty())
                     capabilities.setCapability("appPackage", appPackage);
